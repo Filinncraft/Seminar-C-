@@ -96,3 +96,66 @@
 //     Console.WriteLine("Нет такого дня");
 // else 
 //     Console.WriteLine("Опять работать");
+
+
+// Задача 19. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+
+// void Palindrom5(int num)
+// {
+//     if(num<10000 || num>99999)
+//     Console.WriteLine ("Число не пятизначное");
+//     int temp = num;
+//     int reverse = 0;
+//     while (num > 0)
+//         {
+//             reverse = reverse*10 + num%10;
+//             num = num/10;
+//         }
+//     if (reverse == temp)
+//         Console.WriteLine ("Палиндром");
+//     else 
+//         Console.WriteLine ("Не палиндром");
+// }
+// 
+// Console.Write("Введите число: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// Palindrom5(x);
+
+
+// Задача 21. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+
+// double Distance (int x1, int y1, int x2, int y2, int z1, int z2)
+// {
+//     double Dist = Math.Sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)+(z2-z1)*(z2-z1));
+//     return Dist;
+// }
+// 
+// Console.WriteLine("Введите x1: ");
+// int x1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите x2: ");
+// int x2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите y1: ");
+// int y1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите y2: ");
+// int y2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите z1: ");
+// int z1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите z2: ");
+// int z2 = Convert.ToInt32(Console.ReadLine());
+// double dist = Distance(x1,x2,y1,y2,z1,z2);
+// Console.WriteLine(dist);
+
+
+// Задача 23. Напишите программу, которая принимает на вход число N и выдает таблицу кубов чисел от 1 до N.
+
+// void Triple(int number)
+// {
+//      for (int count = 1; count <= number; count++)
+//      {
+//      Console.Write(count*count*count + " ");
+//      }
+// }
+// 
+// Console.Write("Введите число: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// Triple(x);
