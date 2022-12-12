@@ -159,3 +159,62 @@
 // Console.Write("Введите число: ");
 // int x = Convert.ToInt32(Console.ReadLine());
 // Triple(x);
+
+
+// Задача 25. Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
+// Console.Write("Введите число A: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите число B: ");
+// int b = Convert.ToInt32(Console.ReadLine());
+// int result = a;
+// for (int i = 1; i < b; i++)
+// {
+//     result = result*a;
+// }
+// Console.Write($"{a} в степени {b} равно {result}");
+
+
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+// int SummOfDigit()
+// {
+//     Console.Write("Введите число: ");
+//     int num = Convert.ToInt32(Console.ReadLine());
+//     int summ = 0;
+//     int temp = num;
+//     while (temp>0)
+//     {
+//         summ = summ + temp%10;
+//         temp = temp/10;
+//     }
+//     return (summ);
+// }    
+// int res = SummOfDigit();
+// Console.WriteLine(res);
+
+
+
+// Задача 29: Напишите программу, которая задаёт массив из произвольного кол-ва элементов и выводит их на экран.
+
+// int[] Array()
+// {
+//     Console.Write("Введите число элементов массива: ");
+//     int [] arr = new int [Convert.ToInt32(Console.ReadLine())];
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write("Введите число массива: ");
+//         arr[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return arr;
+// }
+
+// void ShowArray (int[] arr)
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write($"{arr[i]} ");
+//     }
+// }
+
+// ShowArray(Array());
