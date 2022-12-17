@@ -218,3 +218,178 @@
 // }
 
 // ShowArray(Array());
+
+// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
+// Напишите программу, которая покажет количество чётных чисел в массиве.
+
+// void FillArray(int[] arr)
+// {
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = new Random().Next(100,1000);
+//     }
+// }
+// 
+// void ShowArray(int[] arr)
+// {
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write(arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// Console.WriteLine("Введите размер массива:");
+// int size = Convert.ToInt32(Console.ReadLine());
+// int[] num = new int[size];
+// FillArray(num);
+// ShowArray(num);
+// int count = 0;
+// for (int j = 0; j < num.Length; j++)
+// if (num[j] % 2 == 0)
+// count++;
+
+// Console.WriteLine($"{count} чётных чисел в массиве");
+
+
+// Задача 35: Задайте одномерный массив из 123 случайных чисел. 
+// Найдите количество элементов массива, значения которых лежат в отрезке [10,99].
+
+// void FillArray(int[] arr)
+// {
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = new Random().Next();// если не задать разумные границы, то вероятность попадания в нужный отрезок крайне мала. много раз запускал программу и думал, правильно ли она работает, или я накосячил. Попробовал задать отрезок от 10 до 1000 и все нормально.
+//     }
+// }
+// 
+// void ShowArray(int[] arr)
+// {
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write(arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] num = new int[123];
+// FillArray(num);
+// ShowArray(num); // показывать массив не обязательно, так как весь терминал заполнится цифрами (все-таки 123 числа это много), но это дает наглядность
+// int count = 0;
+// for (int j = 0; j < num.Length; j++)
+// if (num[j] > 9 && num[j] < 100)
+// count++;
+
+// Console.WriteLine($"{count} чисел массива лежат в отрезке [10,99]");
+
+
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+
+// void FillArray(int[] arr)
+// {
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = new Random().Next(); //лучше задать какие-нибудь небольшие параметры, чтобы не было десятизначных цифр
+//     }
+// }
+
+// void ShowArray(int[] arr)
+// {
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write(arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// Console.WriteLine("Введите размер массива:");// преподаватель советовал не более 10
+// int size = Convert.ToInt32(Console.ReadLine());
+// int[] num = new int[size];
+// FillArray(num);
+// ShowArray(num); // показывать массив не обязательно, но для проверки стоит
+// int sum = 0;
+// for (int j = 1; j < num.Length; j+=2)
+// sum = sum + num[j];
+
+// Console.WriteLine($"{sum} - сумма элементов на нечетных позициях");
+
+// Задача 37: Найдите произведение пар чисел в одномерном массиве. Результат запишите в новом массиве.
+
+// Console.WriteLine("Введите размер массива:");// преподаватель советовал не более 10
+// int size = Convert.ToInt32(Console.ReadLine());
+// int[] num = new int[size];
+// int[] arr = new int[Convert.ToInt32((size+1)/2)];
+// void FillArray(int[] arr)
+// {
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = new Random().Next(0,100); //лучше задать какие-нибудь небольшие параметры, чтобы не было десятизначных цифр
+//     }
+// }
+
+// void ShowArray(int[] arr)
+// {
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write(arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] Array()
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = Convert.ToInt32((num[i]*num[size-i-1]));
+//     }
+//     return arr;
+// }
+
+// void ShowNewArray (int[] arr)
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write($"{arr[i]} ");
+//     }
+// }
+
+// FillArray(num);
+// ShowArray(num); // показывать массив не обязательно, но для проверки стоит
+// ShowNewArray(Array());
+
+
+// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементом массива.
+
+// void FillArray(double[] arr)
+// {
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = Convert.ToDouble(new Random().Next()); //лучше задать какие-нибудь небольшие параметры, чтобы не было десятизначных цифр
+//     }
+// }
+
+// void ShowArray(double[] arr)
+// {
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write(arr[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// Console.WriteLine("Введите размер массива:");// преподаватель советовал не более 10
+// int size = Convert.ToInt32(Console.ReadLine());
+// double[] num = new double[size];
+// FillArray(num);
+// ShowArray(num); // показывать массив не обязательно, но для проверки стоит
+// double min = num[0];
+// double max = num[0];
+// for (int j = 0; j < num.Length; j++)
+//     {
+//     if (num[j] < min)
+//     min = num[j];
+//     else if (num[j] > max)
+//     max = num[j];
+//     }
+
+// Console.WriteLine($"{max - min} - разница максимального и минимального элемента");
