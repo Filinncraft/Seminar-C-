@@ -289,7 +289,7 @@
 // {
 //     for(int i = 0; i < arr.Length; i++)
 //     {
-//         arr[i] = new Random().Next(); //лучше задать какие-нибудь небольшие параметры, чтобы не было десятизначных цифр
+//         arr[i] = new Random().Next(); 
 //     }
 // }
 
@@ -306,7 +306,7 @@
 // int size = Convert.ToInt32(Console.ReadLine());
 // int[] num = new int[size];
 // FillArray(num);
-// ShowArray(num); // показывать массив не обязательно, но для проверки стоит
+// ShowArray(num); 
 // int sum = 0;
 // for (int j = 1; j < num.Length; j+=2)
 // sum = sum + num[j];
@@ -323,7 +323,7 @@
 // {
 //     for(int i = 0; i < arr.Length; i++)
 //     {
-//         arr[i] = new Random().Next(0,100); //лучше задать какие-нибудь небольшие параметры, чтобы не было десятизначных цифр
+//         arr[i] = new Random().Next(0,100); 
 //     }
 // }
 
@@ -354,7 +354,7 @@
 // }
 
 // FillArray(num);
-// ShowArray(num); // показывать массив не обязательно, но для проверки стоит
+// ShowArray(num); 
 // ShowNewArray(Array());
 
 
@@ -364,7 +364,7 @@
 // {
 //     for(int i = 0; i < arr.Length; i++)
 //     {
-//         arr[i] = Convert.ToDouble(new Random().Next()); //лучше задать какие-нибудь небольшие параметры, чтобы не было десятизначных цифр
+//         arr[i] = Convert.ToDouble(new Random().Next()); 
 //     }
 // }
 
@@ -381,7 +381,7 @@
 // int size = Convert.ToInt32(Console.ReadLine());
 // double[] num = new double[size];
 // FillArray(num);
-// ShowArray(num); // показывать массив не обязательно, но для проверки стоит
+// ShowArray(num); 
 // double min = num[0];
 // double max = num[0];
 // for (int j = 0; j < num.Length; j++)
@@ -393,3 +393,60 @@
 //     }
 
 // Console.WriteLine($"{max - min} - разница максимального и минимального элемента");
+
+
+// Задача 41. Пользователь вводит с клавиатуры М чисел. Посчитайте, сколько чисел больше 0 ввел пользователь.
+
+// void FillArray(int[] arr)
+// {
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write("Введите число: ");
+//         arr[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+// }
+
+// // void ShowArray(int[] arr)
+// // {
+// //     for(int i = 0; i < arr.Length; i++)
+// //     {
+// //         Console.Write(arr[i] + " ");
+// //     }
+// //     Console.WriteLine();
+// // }
+
+// Console.WriteLine("Введите M:");
+// int size = Convert.ToInt32(Console.ReadLine());
+// int[] num = new int[size];
+// FillArray(num);
+// // ShowArray(num);
+// int count = 0;
+// for (int j = 0; j < num.Length; j++)
+// if (num[j] > 0)
+// count++;
+
+// Console.WriteLine($"{count} элемент(а/ов) больше 0"); 
+// для сокращения количества строк можно удалить метод ShowArray, он нужен только для наглядности
+
+
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями 
+// y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+
+Console.WriteLine("Введите k1:");
+int k1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите b1:");
+int b1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите k2:");
+int k2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите b2:");
+int b2 = Convert.ToInt32(Console.ReadLine());
+if (k1 == k2 && b1 == b2)
+    Console.WriteLine("Прямые идентичны. Точек пересечения бесконечно");
+else if (k1 == k2)
+    Console.WriteLine("Прямые паралельны. Точек пересечения нет");
+else
+    {
+    double x = (b2 - b1) / (k1 - k2);
+    double y = k1 * (b2 - b1) / (k1 - k2) + b1;
+    Console.WriteLine($"Координаты точки пересечения - {x},{y}");
+    }
