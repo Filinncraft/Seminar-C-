@@ -432,21 +432,145 @@
 // Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями 
 // y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 
-Console.WriteLine("Введите k1:");
-int k1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите b1:");
-int b1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите k2:");
-int k2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите b2:");
-int b2 = Convert.ToInt32(Console.ReadLine());
-if (k1 == k2 && b1 == b2)
-    Console.WriteLine("Прямые идентичны. Точек пересечения бесконечно");
-else if (k1 == k2)
-    Console.WriteLine("Прямые паралельны. Точек пересечения нет");
-else
-    {
-    double x = (b2 - b1) / (k1 - k2);
-    double y = k1 * (b2 - b1) / (k1 - k2) + b1;
-    Console.WriteLine($"Координаты точки пересечения - {x},{y}");
-    }
+// Console.WriteLine("Введите k1:");
+// int k1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите b1:");
+// int b1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите k2:");
+// int k2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите b2:");
+// int b2 = Convert.ToInt32(Console.ReadLine());
+// if (k1 == k2 && b1 == b2)
+//     Console.WriteLine("Прямые идентичны. Точек пересечения бесконечно");
+// else if (k1 == k2)
+//     Console.WriteLine("Прямые паралельны. Точек пересечения нет");
+// else
+//     {
+//     double x = (b2 - b1) / (k1 - k2);
+//     double y = k1 * (b2 - b1) / (k1 - k2) + b1;
+//     Console.WriteLine($"Координаты точки пересечения - {x},{y}");
+// }
+
+
+// Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+
+// double [,] Create2dArray(int rows, int cols)
+// {
+//     double [,] array = new double [rows, cols];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < cols; j++)
+//         {
+//             array[i,j] = new Random().NextDouble()*100;
+//         }
+//     }
+//     return array;
+// }
+
+// void Show2dArray(double [,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i,j] + " ");
+//         }
+//     Console.WriteLine();
+//     }
+// }
+
+// Console.Write("Enter numb of rows: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter numb of cols: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// double [,] array = Create2dArray(m,n);
+// Show2dArray(array);
+
+
+// Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
+// и возвращает значение этого элемента или же указание, что такого элемента нет.
+
+// int [,] Create2dArray(int rows, int cols)
+// {
+//     int [,] array = new int [rows, cols];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < cols; j++)
+//         {
+//             array[i,j] = new Random().Next(1,10);//границы задал, чтобы не было больших чисел. для задачи это не важно
+//         }
+//     }
+//     return array;
+// }
+
+// void Show2dArray(int [,] array)//весь этот метод для решения необязателен, нужен только для наглядности
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i,j] + " ");
+//         }
+//     Console.WriteLine();
+//     }
+// }
+
+// Console.Write("Enter numb of rows: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter numb of cols: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter first position: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter second position: ");
+// int y = Convert.ToInt32(Console.ReadLine());
+// int [,] array = Create2dArray(m,n);
+// Show2dArray(array);
+// if (x >= m || y >= n)
+//     Console.Write("Нет такого значения");
+// else
+//     Console.Write($"{array[y,x]}");
+
+
+// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+// int [,] Create2dArray(int rows, int cols)
+// {
+//     int [,] array = new int [rows, cols];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < cols; j++)
+//         {
+//             array[i,j] = new Random().Next(1,10);//границы задал, чтобы не было больших чисел. для задачи это не важно
+//         }
+//     }
+//     return array;
+// }
+
+// void Show2dArray(int [,] array)//весь этот метод для решения необязателен, нужен только для наглядности
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i,j] + " ");
+//         }
+//     Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+
+// Console.Write("Enter numb of rows: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter numb of cols: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int [,] array = Create2dArray(m,n);
+// Show2dArray(array);
+// for(int j = 0; j < array.GetLength(1); j++)
+//     {
+//         double temp = 0;
+//         for (int i = 0; i < array.GetLength(0); i++)
+//         {
+//             temp = array[i,j] + temp;
+//         }
+//         Console.Write($"{temp/array.GetLength(0)} ");
+//     }
